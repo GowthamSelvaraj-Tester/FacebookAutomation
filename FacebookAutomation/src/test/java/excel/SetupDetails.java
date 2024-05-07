@@ -61,7 +61,7 @@ public class SetupDetails
 			{
 				try 
 					{
-						File file 				 = new File ("C:\\Users\\hp\\eclipse-workspace\\WebAppAutomation\\Details");
+						File file 				 = new File ("D:\\FacebookAutomation\\FacebookAutomation\\FacebookAutomation\\Details");
 						FileInputStream readfile = new FileInputStream(file);
 						prop = new Properties();
 						prop.load(readfile);
