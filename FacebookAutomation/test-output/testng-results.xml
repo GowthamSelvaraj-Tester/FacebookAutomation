@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-05-08T16:12:22 IST" name="Default suite" finished-at="2024-05-08T16:12:27 IST" duration-ms="5405">
+    <groups>
+    </groups>
+    <test started-at="2024-05-08T16:12:22 IST" name="Default test" finished-at="2024-05-08T16:12:27 IST" duration-ms="5405">
+      <class name="test.FacebookAutomation">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:test.FacebookAutomation@375b5b7f]" started-at="2024-05-08T16:12:22 IST" name="beforeSuite" finished-at="2024-05-08T16:12:22 IST" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method signature="loginPage(java.lang.String,java.lang.String)[pri:0, instance:test.FacebookAutomation@375b5b7f]" started-at="2024-05-08T16:12:22 IST" name="loginPage" data-provider="logindata" finished-at="2024-05-08T16:12:27 IST" duration-ms="5350" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[nivipriya1001@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Lotica@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginPage -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:test.FacebookAutomation@375b5b7f]" started-at="2024-05-08T16:12:27 IST" name="afterSuite" finished-at="2024-05-08T16:12:27 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- test.FacebookAutomation -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
