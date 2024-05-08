@@ -1,17 +1,129 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="1" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-08T16:12:22 IST" name="Default suite" finished-at="2024-05-08T16:12:27 IST" duration-ms="5405">
+  <suite started-at="2024-05-08T17:25:13 IST" name="Default suite" finished-at="2024-05-08T17:25:27 IST" duration-ms="13961">
     <groups>
     </groups>
-    <test started-at="2024-05-08T16:12:22 IST" name="Default test" finished-at="2024-05-08T16:12:27 IST" duration-ms="5405">
+    <test started-at="2024-05-08T17:25:13 IST" name="Default test" finished-at="2024-05-08T17:25:27 IST" duration-ms="13961">
       <class name="test.FacebookAutomation">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:test.FacebookAutomation@375b5b7f]" started-at="2024-05-08T16:12:22 IST" name="beforeSuite" finished-at="2024-05-08T16:12:22 IST" duration-ms="6" status="PASS">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:test.FacebookAutomation@648ee871]" started-at="2024-05-08T17:25:13 IST" name="beforeSuite" finished-at="2024-05-08T17:25:13 IST" duration-ms="7" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method signature="loginPage(java.lang.String,java.lang.String)[pri:0, instance:test.FacebookAutomation@375b5b7f]" started-at="2024-05-08T16:12:22 IST" name="loginPage" data-provider="logindata" finished-at="2024-05-08T16:12:27 IST" duration-ms="5350" status="PASS">
+        <test-method signature="invalidemail(java.lang.String,java.lang.String)[pri:0, instance:test.FacebookAutomation@648ee871]" started-at="2024-05-08T17:25:13 IST" name="invalidemail" data-provider="invalidemaildata" finished-at="2024-05-08T17:25:15 IST" duration-ms="1960" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[zombi3@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Test@123]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at org.testng.Assert.assertTrue(Assert.java:67)
+at test.FacebookAutomation.invalidemail(FacebookAutomation.java:55)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidemail -->
+        <test-method signature="invalidpassword(java.lang.String,java.lang.String)[pri:1, instance:test.FacebookAutomation@648ee871]" started-at="2024-05-08T17:25:15 IST" name="invalidpassword" data-provider="invalidpassworddata" finished-at="2024-05-08T17:25:17 IST" duration-ms="2395" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[abc@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Test@123]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at org.testng.Assert.assertTrue(Assert.java:67)
+at test.FacebookAutomation.invalidpassword(FacebookAutomation.java:80)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidpassword -->
+        <test-method signature="validlogin(java.lang.String,java.lang.String)[pri:2, instance:test.FacebookAutomation@648ee871]" started-at="2024-05-08T17:25:17 IST" name="validlogin" data-provider="validlogindata" finished-at="2024-05-08T17:25:24 IST" duration-ms="7204" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -26,8 +138,8 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginPage -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:test.FacebookAutomation@375b5b7f]" started-at="2024-05-08T16:12:27 IST" name="afterSuite" finished-at="2024-05-08T16:12:27 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- validlogin -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:test.FacebookAutomation@648ee871]" started-at="2024-05-08T17:25:24 IST" name="afterSuite" finished-at="2024-05-08T17:25:27 IST" duration-ms="2361" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
