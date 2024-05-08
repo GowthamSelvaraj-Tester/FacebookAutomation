@@ -18,11 +18,17 @@ public class ReuseMethods
 				elementname.click();
 			}
 		
+		public void clear(WebElement elementname)
+			{
+				elementname.clear();
+			}
+		
 		public ReuseMethods(WebDriver driver)
 			{	
 				this.driver = driver;
 				PageFactory.initElements(driver,this);
 			}
+		
 	
 		public static void main(String[] args)
 			{

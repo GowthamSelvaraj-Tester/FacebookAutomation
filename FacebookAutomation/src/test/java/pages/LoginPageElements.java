@@ -18,6 +18,12 @@ public class LoginPageElements
 		@FindBy(name="login")
 		public WebElement loginbutton;
 		
+		@FindBy(xpath="//div[@class='_9ay7']")
+		public WebElement errormessage;
+		
+		@FindBy(xpath="//div[@class='x9f619 x1n2onr6 x1ja2u2z']")
+		public WebElement homepage;
+	
 		public LoginPageElements(WebDriver driver)
 			{
 				this.driver= driver;
