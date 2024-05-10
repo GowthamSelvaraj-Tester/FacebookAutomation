@@ -6,6 +6,7 @@
       <class name="test.FacebookAutomation">
         <methods>
           <include name="beforeSuite"/>
+          <include name="validlogin" invocation-numbers="0"/>
           <include name="afterSuite"/>
           <include name="invalidemail" invocation-numbers="0"/>
           <include name="invalidpassword" invocation-numbers="0"/>
