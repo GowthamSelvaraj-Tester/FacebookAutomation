@@ -1,3 +1,0 @@
-Chromedriver 	= webdriver.chrome.driver
-Firefoxdriver	= webdriver.firefox.driver
-Edgedriver 		= webdriver.edge.driver
