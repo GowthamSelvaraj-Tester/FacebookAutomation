@@ -1,74 +1,75 @@
 package base;
 
+import java.io.IOException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import utility.ConfigReaders;
+import utility.GlobalVariable;
 
-import excel.SetupDetails;
-
-@SuppressWarnings("unused")
-public class Base extends SetupDetails
-
+public class Base 
 	{
-		public static WebDriver driver;
+		public WebDriver driver;
 		
-		static
+		public WebDriver initializedriver(String appUrl) throws IOException
 			{
-				try
+				String browser = ConfigReaders.getProperty("browsers");
+			
+				if(browser.matches("Chrome")) 
 					{
-						String currentdirectory = System.getProperty("user.dir");
-						
-						String browser = browsers;
-						
-						switch(browser)
-							{
-								case "Chrome":
-									
-									Object launchChromeBrowser = browserinstance(Chrome,currentdirectory+"//chromedriver//chromedriver.exe");
-									driver = new ChromeDriver();
-									launch(driver);
-									break;
-									
-								case "Firefox":
-									Object launchfirefoxbrowser = browserinstance(Firefox, currentdirectory+"//geckodriver//geckodriver.exe");
-									driver = new FirefoxDriver();
-									launch(driver);
-									break;
-								
-								case "Edge":
-									Object launchedgebrowser = browserinstance(Edge, currentdirectory+"//edgedriver//msedgedriver.exe");
-									driver = new FirefoxDriver();
-									launch(driver);
-									break;
-									
-								default:
-									Object defaultbrowser = browserinstance(Chrome,currentdirectory+"//chromedriver//chromedriver.exe");
-									driver = new ChromeDriver();
-									launch(driver);
-									break;
-							}
+			    		System.getProperty(ConfigReaders.getProperty("Chromedriver"),GlobalVariable.basepath+ConfigReaders.getProperty("chromedriverlocation"));
+			    		ChromeOptions option = new ChromeOptions();
+			    		option.addArguments("--disable-infobars");
+			    		option.addArguments("--incognito");
+			    		driver = new ChromeDriver(option);
+			    		driver.manage().window().maximize();
+			    		driver.manage().deleteAllCookies();
+			    		driver.get(appUrl);
 					}
-				catch (Exception e)
+				else if(browser.matches("Firefox"))
 					{
-						System.out.println(e);
+						System.getProperty(ConfigReaders.getProperty("Firefoxdriver"),GlobalVariable.basepath+ConfigReaders.getProperty("firefoxdriverlocation"));
+						FirefoxOptions option = new FirefoxOptions();
+						option.addArguments("--disable-infobars");
+						option.addArguments("--incognito");
+						driver = new FirefoxDriver(option);
+						driver.manage().window().maximize();
+						driver.manage().deleteAllCookies();
+						driver.get(appUrl);
 					}
-			}
+				else if(browser.matches("Edge"))
+					{
+						System.getProperty(ConfigReaders.getProperty("Edgedriver"),GlobalVariable.basepath+ConfigReaders.getProperty("edgedriverlocation"));
+						EdgeOptions option = new EdgeOptions();
+						option.addArguments("--disable-infobars");
+						option.addArguments("--incognito");
+						driver = new EdgeDriver(option);
+						driver.manage().window().maximize();
+						driver.manage().deleteAllCookies();
+						driver.get(appUrl);
+					}
+				else
+					{
+						System.getProperty(ConfigReaders.getProperty("Chromedriver"),GlobalVariable.basepath+ConfigReaders.getProperty("chromedriverlocation"));
+						ChromeOptions option = new ChromeOptions();
+						option.addArguments("--disable-infobars");
+						option.addArguments("--incognito");
+						driver = new ChromeDriver(option);
+						driver.manage().window().maximize();
+						driver.manage().deleteAllCookies();
+						driver.get(appUrl);
+					}
+			
+				return driver;
+			}		
 		
-		public static Object[][]browserinstance(String instance,String driverlocation )
+		public void closebrowser(WebDriver driver)
 			{
-				System.getProperty(instance, driverlocation);
-				return new Object[][] {{instance,driverlocation}};
+				driver.quit();
 			}
-		
-		public static void launch(WebDriver driver)
-			{
-				driver.manage().window().maximize();
-				driver.manage().deleteAllCookies();
-				driver.get(url);
-			}
-
-		public static void main(String[] args) 
-			{
-				// TODO Auto-generated method stub
-			}
+	
 	}
