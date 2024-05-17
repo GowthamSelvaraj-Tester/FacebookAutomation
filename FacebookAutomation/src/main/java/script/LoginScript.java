@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import modules.LoginPageModule;
 import utility.ConfigReaders;
 import utility.ExcelUtility;
+import utility.GlobalVariable;
 import utility.ResourceUtility;
 
 public class LoginScript 
@@ -14,6 +15,7 @@ public class LoginScript
 		private WebDriver driver;
 		private LoginPageModule loginPageModule;
 		private String excelSheetPath = ResourceUtility.getFolderPath();
+	
 		
 		public LoginScript(WebDriver driver)
 			{
@@ -25,8 +27,9 @@ public class LoginScript
 			{
 				try 
 					{
-						Map <String, String> testDataMap = new ExcelUtility().getdata(testCaseName,excelSheetPath,ConfigReaders.getProperty("testCaseData"));
+						Map <String, String> testDataMap = new ExcelUtility().getdata( testCaseName,excelSheetPath,ConfigReaders.getProperty("testDataSheetName"));
 						loginPageModule.login(testDataMap);
+						System.out.println(testDataMap);
 					}
 				catch(Exception e)
 					{

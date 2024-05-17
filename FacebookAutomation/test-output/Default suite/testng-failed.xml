@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.FacebookAutomation">
+      <class name="testbase.TestRunners">
         <methods>
-          <include name="beforeSuite"/>
-          <include name="validlogin" invocation-numbers="0"/>
           <include name="afterSuite"/>
-          <include name="invalidemail" invocation-numbers="0"/>
-          <include name="invalidpassword" invocation-numbers="0"/>
+          <include name="beforeSuite"/>
+          <include name="launchbrowser"/>
+          <include name="TC001_invalidemail"/>
+          <include name="browserteardown"/>
         </methods>
-      </class> <!-- test.FacebookAutomation -->
+      </class> <!-- testbase.TestRunners -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

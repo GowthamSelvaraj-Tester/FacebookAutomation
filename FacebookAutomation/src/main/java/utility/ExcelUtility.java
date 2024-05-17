@@ -63,6 +63,7 @@ public class ExcelUtility
 							    	cell.setCellType(CellType.STRING);
 								}
 							String cellData = cell.getStringCellValue();
+							System.out.println(cellData);
 							return cellData;
 						}
 					catch(Exception e)
