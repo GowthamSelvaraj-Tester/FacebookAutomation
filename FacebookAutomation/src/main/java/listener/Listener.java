@@ -87,4 +87,4 @@ public class Listener extends ScreenshotUtility implements ITestListener {
 		// Flush the extent reports to write the results to the report file
 		extent.flush();
 	}
-}
+}	
