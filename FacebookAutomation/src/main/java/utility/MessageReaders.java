@@ -4,8 +4,9 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.Properties;
 
-public class ConfigReaders  {
-	public static final String configFilepath = GlobalVariable.basepath+"//config.properties";
+public class MessageReaders {
+	
+public static final String configFilepath = GlobalVariable.basepath+"//message.properties";
 	
 	public static String getProperty(String ConfigKey) {
 		Properties prop = new Properties();
