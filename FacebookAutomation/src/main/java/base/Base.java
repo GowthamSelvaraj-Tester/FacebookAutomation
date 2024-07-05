@@ -15,7 +15,7 @@ public class Base  {
 		
 	public WebDriver initializedriver(String URL) throws IOException {
 		// Set the system property for ChromeDriver location
-		System.getProperty(ConfigReaders.getProperty("chromeDriver"),GlobalVariable.basepath+ConfigReaders.getProperty("chromeDriverLocation"));
+		System.getProperty(ConfigReaders.getProperty("Chromedriver"),GlobalVariable.basepath+ConfigReaders.getProperty("chromedriverlocation"));
 		ChromeOptions option = new ChromeOptions(); // Create ChromeOptions to customize browser settings
 		option.addArguments("--disable-cache");// Disable cache
 		option.addArguments("--disable-cookies"); // Disable cookies
@@ -24,7 +24,7 @@ public class Base  {
 		option.setPageLoadStrategy(PageLoadStrategy.NORMAL);// Set page load strategy to normal
 //		option.addArguments("--headless");// Headless mode for running tests without GUI (commented out)
 		option.addArguments("--disable-infobars"); // Disable infobars
-		option.addArguments("--incognito"); // Launch browser in incognito mode
+		//option.addArguments("--incognito"); // Launch browser in incognito mode
 		driver = new ChromeDriver(option); // Initialize ChromeDriver with options 
 		driver.manage().window().maximize();// Maximize browser window
 		driver.manage().deleteAllCookies();// Delete all cookies

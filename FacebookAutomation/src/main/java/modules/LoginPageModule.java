@@ -46,10 +46,13 @@ public class LoginPageModule {
 			Assert.assertEquals(actualPlaceholder, expectedPlaceholder,"Placeholder text's doesn't match");
 		}catch(NoSuchElementException e) {
 			Listener.extentTest.get().log(Status.FAIL,"NoSuchElementException:" + e.getMessage());
+			Assert.fail("NoSuchElementException", e);
 		}catch(AssertionError e) {
 			Listener.extentTest.get().log(Status.FAIL,"AssertionError:" + e.getMessage());
+			Assert.fail("AssertionError", e);
 		}catch(Exception e) {
 			Listener.extentTest.get().log(Status.FAIL,"Exception:" + e.getMessage());
+			Assert.fail("Exception", e);
 		}
 	}
 	
@@ -64,10 +67,13 @@ public class LoginPageModule {
 			Assert.assertEquals(actualPlaceholder,expectedPlaceholder,"Placeholder text's doesn't match");
 		}catch(NoSuchElementException e) {
 			Listener.extentTest.get().log(Status.FAIL,"NoSuchElementException:" + e.getMessage());
+			Assert.fail("NoSuchElementException", e);
 		}catch(AssertionError e) {
 			Listener.extentTest.get().log(Status.FAIL,"AssertionError:" + e.getMessage());
+			Assert.fail("AssertionError", e);
 		}catch(Exception e) {
 			Listener.extentTest.get().log(Status.FAIL,"Exception:" + e.getMessage());
+			Assert.fail("Exception", e);
 		}
 	}
 	
@@ -77,15 +83,18 @@ public class LoginPageModule {
 			Listener.extentTest.get().log(Status.PASS,"Login Button is displayed");
 			
 			String expectedButtontext = MessageReaders.getProperty("passwordplaceholder");
-			String actualButtontext   = element.passwordfield.getAttribute("placeholder");
+			String actualButtontext   = element.passwordfield.getText();
 			
 			Assert.assertEquals(actualButtontext,expectedButtontext,"Button text's doesn't match");
 		}catch(NoSuchElementException e) {
 			Listener.extentTest.get().log(Status.FAIL,"NoSuchElementException:" + e.getMessage());
+			Assert.fail("NoSuchElementException", e);
 		}catch(AssertionError e) {
 			Listener.extentTest.get().log(Status.FAIL,"AssertionError:" + e.getMessage());
+			Assert.fail("AssertionError", e);
 		}catch(Exception e) {
 			Listener.extentTest.get().log(Status.FAIL,"Exception:" + e.getMessage());
+			Assert.fail("Exception", e);
 		}
 	}
 	
