@@ -26,5 +26,3 @@ public class ScreenshotUtility {
 			return destination; // Return the destination file path
 		}
 	}
-
-}
