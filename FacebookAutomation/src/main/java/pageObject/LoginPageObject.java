@@ -15,7 +15,7 @@ public class LoginPageObject  {
 	}
 	
 	@FindBy(id="email")
-	private WebElement emailfield;
+	public WebElement emailfield;
 		
 	@FindBy(id="pass")
 	public WebElement passwordfield;
