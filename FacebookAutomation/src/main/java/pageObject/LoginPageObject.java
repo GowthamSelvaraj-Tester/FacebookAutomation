@@ -20,6 +20,6 @@ public class LoginPageObject  {
 	@FindBy(id="pass")
 	public WebElement passwordfield;
 		
-	@FindBy(id="u_0_5_m8")
+	@FindBy(xpath="//*[contains(text(),'Log in')]")
 	public WebElement loginbutton;	
 }

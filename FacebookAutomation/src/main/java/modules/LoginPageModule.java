@@ -82,8 +82,8 @@ public class LoginPageModule {
 			Assert.assertTrue(element.loginbutton.isDisplayed(),"Login Button is not displayed");
 			Listener.extentTest.get().log(Status.PASS,"Login Button is displayed");
 			
-			String expectedButtontext = MessageReaders.getProperty("passwordplaceholder");
-			String actualButtontext   = element.passwordfield.getText();
+			String expectedButtontext = MessageReaders.getProperty("loginbutton");
+			String actualButtontext   = element.loginbutton.getText();
 			
 			Assert.assertEquals(actualButtontext,expectedButtontext,"Button text's doesn't match");
 		}catch(NoSuchElementException e) {
